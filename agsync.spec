@@ -7,7 +7,8 @@ Release:	0.%{_rc}.%{_rel}
 License:	MPL v1.1
 Group:		Applications
 URL:		http://duskwood.lownewulf.com/avantgo.html
-Source0:	http://ftp.debian.org/debian/pool/main/a/agsync/%{name}_%{version}-%{_rc}.orig.tar.gz
+Source0:	http://duskwood.lownewulf.com/%{name}-%{version}-%{_rc}.tgz
+# Source0-md5:	74de1b1452a718c85364fab5ce3c0c2a
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -15,7 +16,7 @@ This package contains the AvantGo - Pocket PC synchronization mediator
 command line application.
 
 %prep
-%setup -q -n %{name}-%{version}-%{_rc}.orig
+%setup -q -n %{name}-%{version}-%{_rc}
 
 %build
 %{__make}
