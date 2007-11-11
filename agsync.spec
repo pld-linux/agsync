@@ -8,9 +8,9 @@ License:	MPL v1.1
 Group:		Applications
 URL:		http://duskwood.lownewulf.com/avantgo.html
 Source0:	http://duskwood.lownewulf.com/%{name}-%{version}-%{_rc}.tgz
+Patch0:		%{name}-debian.patch
 # Source0-md5:	74de1b1452a718c85364fab5ce3c0c2a
 BUildRequires:	synce-librapi2-devel
-Patch0:		%{name}-debian.patch
 BUildRequires:	synce-libsynce-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
