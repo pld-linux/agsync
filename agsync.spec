@@ -1,5 +1,5 @@
 %define		_rc	pre
-%define		_rel	0.1
+%define		_rel	2
 Summary:	Synchronization mediator for AvantGo and Pocket PC
 Name:		agsync
 Version:	0.2
