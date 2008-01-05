@@ -11,8 +11,8 @@ Source0:	http://duskwood.lownewulf.com/%{name}-%{version}-%{_rc}.tgz
 Patch0:		%{name}-debian.patch
 # Source0-md5:	74de1b1452a718c85364fab5ce3c0c2a
 URL:		http://duskwood.lownewulf.com/avantgo.html
-BUildRequires:	synce-librapi2-devel
-BUildRequires:	synce-libsynce-devel
+BuildRequires:	synce-librapi2-devel
+BuildRequires:	synce-libsynce-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
