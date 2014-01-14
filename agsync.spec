@@ -1,5 +1,5 @@
 %define		_rc	pre
-%define		_rel	2
+%define		_rel	3
 Summary:	Synchronization mediator for AvantGo and Pocket PC
 Summary(pl.UTF-8):	Mediator synchronizacji dla AvantGo i Pocket PC
 Name:		agsync
@@ -80,6 +80,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc README
 %attr(755,root,root) %{_bindir}/agsync
 %attr(755,root,root) %{_libdir}/libmal-funcs.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libmal-funcs.so.0
 %{_mandir}/man1/agsync.1*
 
 %files devel
