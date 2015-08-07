@@ -1,5 +1,5 @@
 %define		_rc	pre
-%define		_rel	3
+%define		_rel	4
 Summary:	Synchronization mediator for AvantGo and Pocket PC
 Summary(pl.UTF-8):	Mediator synchronizacji dla AvantGo i Pocket PC
 Name:		agsync
@@ -9,6 +9,7 @@ License:	MPL v1.1
 Group:		Applications/Communications
 Source0:	http://duskwood.lownewulf.com/%{name}-%{version}-%{_rc}.tgz
 Patch0:		%{name}-debian.patch
+Patch1:		synce-ac.path
 # Source0-md5:	74de1b1452a718c85364fab5ce3c0c2a
 URL:		http://duskwood.lownewulf.com/avantgo.html
 BuildRequires:	synce-core-lib-devel
@@ -53,9 +54,12 @@ Statyczna biblioteka AvantGo.
 %prep
 %setup -q -n %{name}-%{version}-%{_rc}
 %patch0 -p1
-chmod +x configure
+%patch1 -p1
+
+%{__rm} configure
 
 %build
+%{__autoconf}
 %configure
 %{__make}
 

@@ -1,0 +1,47 @@
+--- agsync-0.2-pre/configure.in~	2015-08-07 22:32:51.000000000 +0200
++++ agsync-0.2-pre/configure.in	2015-08-07 22:33:19.268565790 +0200
+@@ -48,44 +48,4 @@
+ 	]
+ )
+ 
+-AC_ARG_WITH(librapi2,
+-	AC_HELP_STRING(
+-			[--with-librapi2[=DIR]],
+-			[Search for librapi2 in DIR/include and DIR/lib]),
+-	[
+-		CPPFLAGS="$CPPFLAGS -I${withval}/include"
+-		LDFLAGS="$LDFLAGS -L${withval}/lib"
+-	]
+-)
+-
+-AC_ARG_WITH(librapi2-include,
+-	AC_HELP_STRING(
+-			[--with-librapi2-include[=DIR]],
+-			[Search for librapi2 header files in DIR]),
+-	[
+-		CPPFLAGS="$CPPFLAGS -I${withval}"
+-	]
+-)
+-
+-AC_ARG_WITH(librapi2-lib,
+-	AC_HELP_STRING(
+-			[--with-librapi2-lib[=DIR]],
+-			[Search for librapi2 library files in DIR]),
+-	[
+-		LDFLAGS="$LDFLAGS -L${withval}"
+-	]
+-)
+-
+-AC_CHECK_LIB(rapi,CeRapiInit,,
+-	[
+-		AC_MSG_ERROR([Can't find RAPI library])
+-	]
+-)
+-
+-AC_CHECK_HEADERS(rapi.h,,
+-	[
+-		AC_MSG_ERROR([Can't find rapi.h])
+-	]
+-)
+-
+ AC_OUTPUT(Makefile mal-files/Makefile mal-files/client/Makefile)
