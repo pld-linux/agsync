@@ -1,5 +1,5 @@
 %define		_rc	pre
-%define		_rel	4
+%define		_rel	5
 Summary:	Synchronization mediator for AvantGo and Pocket PC
 Summary(pl.UTF-8):	Mediator synchronizacji dla AvantGo i Pocket PC
 Name:		agsync
