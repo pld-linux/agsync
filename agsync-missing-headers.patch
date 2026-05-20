@@ -1,0 +1,11 @@
+--- agsync-0.2-pre.orig/mal-files/AGNet.c
++++ agsync-0.2-pre/mal-files/AGNet.c
+@@ -28,6 +28,8 @@
+ #ifndef _WIN32
+ #include <ctype.h> //PENDING(klobad) not needed on palm or win remove??
+ #include <errno.h>
++#include <arpa/inet.h>
++#include <sys/ioctl.h>
+ #endif
+
+ typedef struct _socksStruct {
